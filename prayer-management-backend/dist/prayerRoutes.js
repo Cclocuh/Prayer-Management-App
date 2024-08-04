@@ -1,0 +1,11 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+const express_1 = require("express");
+const prayerController_1 = require("./prayerController");
+const router = (0, express_1.Router)();
+router.post('/prayers', prayerController_1.createPrayer);
+router.get('/prayers', prayerController_1.getPrayers);
+router.get('/prayers/:id', prayerController_1.getPrayerById);
+router.put('/prayers/:id', prayerController_1.updatePrayerById);
+router.delete('/prayers/:id', prayerController_1.deletePrayerById);
+exports.default = router;
